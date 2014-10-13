@@ -4,12 +4,12 @@ using System.Text;
 using System.IO;
 
 public class LevelBuiler : MonoBehaviour {
-
+	ArrayList levelPaths = new ArrayList();
 
 
 	// Use this for initialization
 	void Start () {
-		ArrayList levelPaths =  new ArrayList();
+
 	}
 
 
@@ -20,8 +20,7 @@ public class LevelBuiler : MonoBehaviour {
 		string line = "";
 		// create file based on passed in filepath
 		try{
-			File levelFile = new File(filepath);
-			StreamReader reader = new StreamReader(levelFile, Encoding.Default);
+			StreamReader reader = new StreamReader(filepath);
 			while(line!=null){
 				line = reader.ReadLine ();
 
@@ -31,6 +30,7 @@ public class LevelBuiler : MonoBehaviour {
 		catch (FileNotFoundException fnf){
 			print("File not found");
 		}
+		return true;
 	}
 
 }
