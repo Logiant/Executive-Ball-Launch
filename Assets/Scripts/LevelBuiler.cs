@@ -9,26 +9,39 @@ public class LevelBuiler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		load ("level1.txt"); // expecting a FileNotFound Exception here
 	}
 
 
 	// reads in file from user and generates the level
 	private bool load(string filepath){
-		//levelPaths.Add (filepath);
-		// next line in the file
-		string line = "";
+		levelPaths.Add (filepath);
+
+		string line = ""; // next line in the file
+		string[] data = new string[5];// {type,xCord,yCord,zCord,rot}
+		/*string type = "";
+		string xCord = "";
+		string yCord = "";
+		string zCord = "";
+		string rot = "";*/
+		int nextComma = 0;
+
 		// create file based on passed in filepath
 		try{
 			StreamReader reader = new StreamReader(filepath);
 			while(line!=null){
 				line = reader.ReadLine ();
-
+				for(int i = 0; i < data.Length; i++){
+					nextComma = line.IndexOf (',');
+					data[i] = line.Substring(0,nextComma);
+					Debug.Log(string.Format (""+data[i]));
+					line = line.Substring (nextComma+1);
+				}
 			}
 		}
 		// handle file not found
-		catch (FileNotFoundException fnf){
-			print("File not found");
+		catch {
+			Debug.Log(string.Format("File not found"));
 		}
 		return true;
 	}
