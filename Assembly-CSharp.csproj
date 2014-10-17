@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\GUI\PowerBar.cs" />
      <Compile Include="Assets\Scripts\LevelBuiler.cs" />
      <Compile Include="Assets\Scripts\SpawnBall.cs" />
+     <Compile Include="Assets\Scripts\WinScript.cs" />
      <None Include="Assets\level1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
