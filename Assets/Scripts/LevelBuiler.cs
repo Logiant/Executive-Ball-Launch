@@ -59,16 +59,26 @@ public class LevelBuiler : MonoBehaviour {
 	private bool createBlock(float[] data){
 		// data[0] is the type of the block, for now it is wood block
 		Vector3 position = new Vector3 (data [1], data [2], data [3]); // create position vector of block
+		GameObject obj;
+		if (data [0] == 0.0) { // select type of block
+				obj = winBlock;
+		} else if (data [0] == 1.0) {
+				obj = woodBlock;
+		} else if (data [0] == 0.0) {
+			obj = stoneBlock;
+		} else {
+			obj = woodBlock;
+		}
 		try{
-			Quaternion rot = Quaternion.Euler (0,0,0);
 			Debug.Log (""+data[4]);
-			if(data[4] == 1.0){
-				Debug.Log ("one");
-				rot = Quaternion.Euler (90,0,0);
-			}else if(data[4] == 2.0){
-				rot = Quaternion.Euler (0,90,0);
+			if(data[4] == 1.0){ // rotate vertically
+				Instantiate (obj, position, Quaternion.Euler (0,0,90));
+			}else if(data[4] == 2.0){ // rotate horizontally
+				Instantiate (obj, position, Quaternion.Euler (0,90,0));
+			}else{ // no rotation
+				Instantiate (obj, position, Quaternion.Euler (0,0,0));
 			}
-			Instantiate (woodBlock, position, rot); //Quaternion.Euler (data[4], 0, 0)); // instantiate block
+			//Instantiate (woodBlock, position, rot); //Quaternion.Euler (data[4], 0, 0)); // instantiate block
 		}catch{
 			Debug.Log("error building");
 				}
