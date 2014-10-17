@@ -11,7 +11,7 @@ public class LevelBuiler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		load ("Assets/level1.txt"); // expecting a FileNotFound Exception here
+		load ("Assets/Levels/level1.txt"); // expecting a FileNotFound Exception here
 	}
 
 
