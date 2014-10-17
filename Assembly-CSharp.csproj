@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\LevelBuiler.cs" />
      <Compile Include="Assets\Scripts\SpawnBall.cs" />
      <Compile Include="Assets\Scripts\WinScript.cs" />
-     <None Include="Assets\level1.txt" />
+     <None Include="Assets\Scenes\Levels\level1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
