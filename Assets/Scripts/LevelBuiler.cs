@@ -12,6 +12,7 @@ public class LevelBuiler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("hey");
 		load ("Assets/Levels/level1.txt"); // expecting a FileNotFound Exception here
 	}
 
@@ -72,7 +73,7 @@ public class LevelBuiler : MonoBehaviour {
 			obj = woodBlock;
 		}
 		try{
-			Instantiate (obj, position, Quaternion.Euler (data[4],data[5],data[6])); // instantiate block
+			Instantiate (obj, position, Quaternion.Euler (data[4]+90,data[5]+90,data[6])); // instantiate block
 		}catch{
 			Debug.Log("error building");
 				}

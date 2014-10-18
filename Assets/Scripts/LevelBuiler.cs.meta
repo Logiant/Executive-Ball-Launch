@@ -3,9 +3,9 @@ guid: 76a29b219f9b2aa4a86f9b1bd2d6bb80
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - stoneBlock: {instanceID: 0}
-  - woodBlock: {instanceID: 0}
-  - winBlock: {instanceID: 0}
+  - stoneBlock: {fileID: 100000, guid: 2ceac4b1de8974d4e8eab46cd1e71f65, type: 2}
+  - woodBlock: {fileID: 100000, guid: 5c05e0b51aa0cbb4693a6c163198535f, type: 2}
+  - winBlock: {fileID: 100000, guid: 2ceac4b1de8974d4e8eab46cd1e71f65, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
