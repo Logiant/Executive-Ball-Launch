@@ -67,7 +67,7 @@ public class LevelBuiler : MonoBehaviour {
 			hasWin = true;
 		} else if (data [0] == 1.0) {
 				obj = woodBlock;
-		} else if (data [0] == 0.0) {
+		} else if (data [0] == 2.0) {
 			obj = stoneBlock;
 		} else {
 			obj = woodBlock;
