@@ -7,10 +7,12 @@ public class LevelBuiler : MonoBehaviour {
 	public GameObject stoneBlock;
 	public GameObject woodBlock;
 	public GameObject winBlock;
+	public bool hasWin = false;
 
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("hey");
 		load ("Assets/Levels/level1.txt"); // expecting a FileNotFound Exception here
 	}
 
@@ -19,7 +21,7 @@ public class LevelBuiler : MonoBehaviour {
 	private bool load(string filepath){
 
 		string line = ""; // next line in the file
-		float[] data = new float[5];// {type,xCord,yCord,zCord,rot}
+		float[] data = new float[7];// {type,xCord,yCord,zCord,rot}
 		/*string type = "";
 		string xCord = "";
 		string yCord = "";
@@ -60,8 +62,9 @@ public class LevelBuiler : MonoBehaviour {
 		// data[0] is the type of the block, for now it is wood block
 		Vector3 position = new Vector3 (data [1], data [2], data [3]); // create position vector of block
 		GameObject obj;
-		if (data [0] == 0.0) { // select type of block
+		if (data [0] == 0.0 && !hasWin) { // select type of block
 				obj = winBlock;
+			hasWin = true;
 		} else if (data [0] == 1.0) {
 				obj = woodBlock;
 		} else if (data [0] == 0.0) {
@@ -70,15 +73,7 @@ public class LevelBuiler : MonoBehaviour {
 			obj = woodBlock;
 		}
 		try{
-			Debug.Log (""+data[4]);
-			if(data[4] == 1.0){ // rotate vertically
-				Instantiate (obj, position, Quaternion.Euler (0,0,90));
-			}else if(data[4] == 2.0){ // rotate horizontally
-				Instantiate (obj, position, Quaternion.Euler (0,90,0));
-			}else{ // no rotation
-				Instantiate (obj, position, Quaternion.Euler (0,0,0));
-			}
-			//Instantiate (woodBlock, position, rot); //Quaternion.Euler (data[4], 0, 0)); // instantiate block
+			Instantiate (obj, position, Quaternion.Euler (data[4]+90,data[5]+90,data[6])); // instantiate block
 		}catch{
 			Debug.Log("error building");
 				}
