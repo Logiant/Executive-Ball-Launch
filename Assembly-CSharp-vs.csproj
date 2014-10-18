@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallScript.cs" />
+     <Compile Include="Assets\Scripts\CamScript.cs" />
      <Compile Include="Assets\Scripts\CannonMotion.cs" />
      <Compile Include="Assets\Scripts\GUI\PowerBar.cs" />
      <Compile Include="Assets\Scripts\LevelBuiler.cs" />
