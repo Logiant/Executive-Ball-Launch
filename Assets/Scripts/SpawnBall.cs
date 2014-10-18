@@ -20,7 +20,7 @@ public class SpawnBall : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (ballsLeft > 0 && potato == null) { //if there is a ball left to launch, and not a current ball moving
 			if (Input.GetMouseButton (0)) { //if the mouse button is down
 				speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
@@ -38,6 +38,9 @@ public class SpawnBall : MonoBehaviour {
 
 		}
 		text.text = "Spuds Remaining: " + ballsLeft; //update GUI text every update
+		if (Input.GetMouseButton (0)) { 
+			camScript.target = null;
+		}
 	}
 
 	public float getSpeed() {

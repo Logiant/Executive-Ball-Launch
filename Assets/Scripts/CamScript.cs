@@ -14,8 +14,8 @@ public class CamScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (target != null) { //if there is a potato to follow
-			float bias = 0.15f;
-			Vector3 followSpot = new Vector3(0, 3 + transform.position.z*bias/2.5f, -6 - transform.position.z * bias);
+			float scale = 0.25f;
+			Vector3 followSpot = new Vector3(0, 3 + transform.position.z*scale/2.5f, -6 - transform.position.z * scale);
 			transform.position = target.transform.position + followSpot;
 			transform.LookAt (target.transform.position);
 		} else { //go to the origin position
