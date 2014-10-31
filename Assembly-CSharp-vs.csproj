@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\GUI\PowerBar.cs" />
      <Compile Include="Assets\Scripts\LevelBuiler.cs" />
      <Compile Include="Assets\Scripts\SpawnBall.cs" />
+     <Compile Include="Assets\Scripts\Title\DisplayLoss.cs" />
+     <Compile Include="Assets\Scripts\Title\DisplayWin.cs" />
      <Compile Include="Assets\Scripts\Title\TitleGUI.cs" />
      <Compile Include="Assets\Scripts\Title\TitleScript.cs" />
      <Compile Include="Assets\Scripts\WinScript.cs" />

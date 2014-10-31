@@ -51,7 +51,7 @@ public class LevelBuiler : MonoBehaviour {
 				}
 			}
 			if(!hasWin){
-				float[] defaultWin = {0.0,0,0,50,90,90,0};
+				float[] defaultWin = {0.0f,0,0,50,90,90,0};
 				createBlock (defaultWin);
 			}
 		}
