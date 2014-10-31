@@ -25,10 +25,10 @@ public class SpawnBall : MonoBehaviour {
 		Debug.Log("balls left: "+ballsLeft+" potato isNul: "+(potato == null)+" mouseDown: "+Input.GetMouseButton(0));
 		if (ballsLeft > 0 && potato == null) { //if there is a ball left to launch, and not a current ball moving
 						
-			/**if (win.win) {
+			/*if (win.win) {
 								//win
 							//Debug.Log ("win");
-						}**/
+						}*/
 			Debug.Log ("inside");
 						if (Input.GetMouseButton (0)) { //if the mouse button is down
 								speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
