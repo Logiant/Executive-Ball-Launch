@@ -50,6 +50,10 @@ public class LevelBuiler : MonoBehaviour {
 					isNull = true; // end of data
 				}
 			}
+			if(!hasWin){
+				float[] defaultWin = {0.0,0,0,50,90,90,0};
+				createBlock (defaultWin);
+			}
 		}
 		// handle file not found
 		catch {
