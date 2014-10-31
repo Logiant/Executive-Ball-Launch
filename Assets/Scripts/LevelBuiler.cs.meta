@@ -5,7 +5,7 @@ MonoImporter:
   defaultReferences:
   - stoneBlock: {fileID: 100000, guid: 2ceac4b1de8974d4e8eab46cd1e71f65, type: 2}
   - woodBlock: {fileID: 100000, guid: 5c05e0b51aa0cbb4693a6c163198535f, type: 2}
-  - winBlock: {fileID: 100000, guid: 2ceac4b1de8974d4e8eab46cd1e71f65, type: 2}
+  - winBlock: {fileID: 100000, guid: 32c1c5c824fc1374e90a256495e70f3a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

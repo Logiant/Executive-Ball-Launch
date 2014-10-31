@@ -12,7 +12,6 @@ public class LevelBuiler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("hey");
 		load ("Assets/Levels/level1.txt"); // expecting a FileNotFound Exception here
 	}
 

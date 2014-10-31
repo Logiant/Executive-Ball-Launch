@@ -9,7 +9,12 @@ public class DisplayLoss : MonoBehaviour {
 		//background box
 		GUI.Box (new Rect(0, 0, 300, Screen.height - 75), "Spud Shot");
 		//buttons
-		if (GUI.Button (new Rect(55, 100, 180, 40), "Start")) {
+
+		GUI.TextArea (new Rect (0, 50, 250, 50), "You win!");
+		if (GUI.Button (new Rect(55, 100, 180, 40), "Menu")) {
+			//Application.TitleGUI().OnGUI();
+		}
+		if (GUI.Button (new Rect(55, 100, 180, 40), "Re-start")) {
 			Application.LoadLevel ("TestScene");
 		}
 		if (GUI.Button (new Rect(55, 300, 180, 41), "Exit")) {
