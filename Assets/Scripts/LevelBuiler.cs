@@ -18,13 +18,14 @@ public class LevelBuiler : MonoBehaviour {
 		Debug.Log ("start");
 		spawn = spawner.GetComponent<SpawnBall> ();
 		Debug.Log ("started");
-		load ("Assets/Levels/level1.txt"); // expecting a FileNotFound Exception here
+		load ("level1"); // expecting a FileNotFound Exception here
 	}
 
 
 	// reads in file from user and generates the level
-	private bool load(string filepath){
-		currentLevel = filepath;
+	public bool load(string filename){
+		currentLevel = filename;
+		string filepath = "Assets/Levels/"+filename+".txt";
 		string line = ""; // next line in the file
 		float[] data = new float[7];// {type,xCord,yCord,zCord,rot}
 		/*string type = "";
@@ -56,7 +57,7 @@ public class LevelBuiler : MonoBehaviour {
 				}
 			}
 			if(!hasWin){
-				float[] defaultWin = {0.0f,0,0,50,90,90,0};
+				float[] defaultWin = {0,0,1,50,90,90,0};
 				createBlock (defaultWin);
 			}
 		}
@@ -72,8 +73,7 @@ public class LevelBuiler : MonoBehaviour {
 		Vector3 position = new Vector3 (data [1], data [2], data [3]); // create position vector of block
 		GameObject obj;
 		if (data [0] == 0.0 && !hasWin) { // select type of block
-				obj = winBlock;
-			spawn.win = obj.GetComponent<WinScript>();
+			obj = winBlock;
 			hasWin = true;
 		} else if (data [0] == 1.0) {
 				obj = woodBlock;
@@ -86,6 +86,7 @@ public class LevelBuiler : MonoBehaviour {
 			GameObject g = (GameObject)Instantiate (obj, position, Quaternion.Euler (data[4]+90,data[5]+90,data[6])); // instantiate block
 			if(g.tag == "Win"){
 				spawn.win = g.GetComponent<WinScript>();
+				spawn.win.setInitPos(g);
 			}
 		}catch{
 			Debug.Log("error building");
