@@ -15,7 +15,7 @@ public class SpawnBall : MonoBehaviour {
 	float speed = 5; //current ball speed
 	public int ballsLeft = 5; //number of balls remaining
 	bool charging = false;
-
+	public ParticleSystem smoke;
 	GameObject potato; //the current potato
 
 	void Start() {
@@ -35,6 +35,7 @@ public class SpawnBall : MonoBehaviour {
 										speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
 										charging = true;
 								} else if (charging) { //if the mouse button is released
+										smoke.Play ();
 										potato = (GameObject)Instantiate (ball, transform.position, transform.rotation); //create a new ball
 										potato.rigidbody.velocity = transform.rotation * new Vector3 (0, 0, speed); //set the speed to forward and rotate it
 										potato.rigidbody.angularVelocity = new Vector3 (Random.Range (-8, 8), Random.Range (-8, 8), Random.Range (-8, 8));
