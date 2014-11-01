@@ -18,7 +18,7 @@ public class LevelBuiler : MonoBehaviour {
 		Debug.Log ("start");
 		spawn = spawner.GetComponent<SpawnBall> ();
 		Debug.Log ("started");
-		load ("level1"); // expecting a FileNotFound Exception here
+		load (ApplicationModel.level); // expecting a FileNotFound Exception here
 	}
 
 

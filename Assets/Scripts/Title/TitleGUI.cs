@@ -10,7 +10,11 @@ public class TitleGUI : MonoBehaviour {
 		GUI.Box (new Rect(0, 0, 300, Screen.height - 75), "Spud Shot");
 		//buttons
 		if (GUI.Button (new Rect(55, 100, 180, 40), "Start")) {
+			ApplicationModel.level = "level1";
 			Application.LoadLevel ("LoadLevel");
+		}
+		if (GUI.Button (new Rect(55, 200, 180, 41), "Level Select")) {
+			Application.LoadLevel ("LevelSelect");
 		}
 		if (GUI.Button (new Rect(55, 300, 180, 41), "Exit")) {
 			Application.Quit ();

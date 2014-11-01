@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ApplicationModel.cs" />
      <Compile Include="Assets\Scripts\BallScript.cs" />
      <Compile Include="Assets\Scripts\CamScript.cs" />
      <Compile Include="Assets\Scripts\CannonMotion.cs" />
@@ -53,15 +54,19 @@
      <Compile Include="Assets\Scripts\GUI\PowerBar.cs" />
      <Compile Include="Assets\Scripts\LevelBuiler.cs" />
      <Compile Include="Assets\Scripts\SpawnBall.cs" />
+     <Compile Include="Assets\Scripts\Title\LevelSelect.cs" />
      <Compile Include="Assets\Scripts\Title\TitleGUI.cs" />
      <Compile Include="Assets\Scripts\Title\TitleScript.cs" />
      <Compile Include="Assets\Scripts\WinScript.cs" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Levels\level3.txt" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Levels\level1.txt" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Levels\level2.txt" />
+     <None Include="Assets\Levels\level5.txt" />
+     <None Include="Assets\Levels\level4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

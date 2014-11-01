@@ -6,10 +6,8 @@ public class WinScript : MonoBehaviour {
 	public Vector3 initPos;
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("new win");
 		win = false;
 		initPos = transform.position;
-		Debug.Log ("INIT: "+initPos);
 	}
 
 	public void setInitPos(GameObject obj){
