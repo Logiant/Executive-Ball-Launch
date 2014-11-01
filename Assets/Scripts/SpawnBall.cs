@@ -22,15 +22,12 @@ public class SpawnBall : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("balls left: "+ballsLeft+" potato isNul: "+(potato == null)+" mouseDown: "+Input.GetMouseButton(0));
 		if (ballsLeft > 0 && potato == null) { //if there is a ball left to launch, and not a current ball moving
-						
-			/*if (win.win) {
-								//win
-							//Debug.Log ("win");
-						}*/
-			Debug.Log ("inside");
-						if (Input.GetMouseButton (0)) { //if the mouse button is down
+			if (win.win) {
+						//win
+							Debug.Log ("you win");
+			}
+			if (Input.GetMouseButton (0)) { //if the mouse button is down
 								speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
 								charging = true;
 						} else if (charging) { //if the mouse button is released
@@ -44,7 +41,14 @@ public class SpawnBall : MonoBehaviour {
 						}
 
 				} else if (ballsLeft == 0 && potato == null) {
+					if (win.win) {
+				//win
+						Debug.Log ("you win");
+					}
+					else{
+						Debug.Log ("you lose");
 					// lose
+					}
 				}
 		text.text = "Spuds Remaining: " + ballsLeft; //update GUI text every update
 		if (Input.GetMouseButton (0)) { 

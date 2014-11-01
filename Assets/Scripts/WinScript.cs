@@ -12,8 +12,10 @@ public class WinScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position == initPos) {
+		Vector3 dif = initPos - transform.position;
+		if (dif.magnitude > .75) {
 			win = true;
+			//Debug.Log ("win");
 				}
 	}
 }
