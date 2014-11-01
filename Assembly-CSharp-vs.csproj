@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\WinScript.cs" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Levels\level3.txt" />
+     <None Include="Assets\Audio\Attribution.txt" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Levels\level1.txt" />
      <None Include="Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />

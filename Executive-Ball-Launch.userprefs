@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnBall.cs">
     <Files>
       <File FileName="Assets\Scripts\SpawnBall.cs" Line="38" Column="11" />
-      <File FileName="Assets\Scripts\ApplicationModel.cs" Line="7" Column="1" />
-      <File FileName="Assets\Scripts\GUI\GameOver.cs" Line="108" Column="1" />
-      <File FileName="Assets\Levels\level1.txt" Line="9" Column="1" />
-      <File FileName="Assets\Scripts\Title\LevelSelect.cs" Line="43" Column="1" />
-      <File FileName="Assets\Scripts\Title\TitleGUI.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\ApplicationModel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\GameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Levels\level1.txt" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Title\LevelSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Title\TitleGUI.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CamScript.cs" Line="8" Column="18" />
     </Files>
     <Pads>
@@ -18,7 +18,7 @@
             <Node name="Scripts" expanded="True">
               <Node name="GUI" expanded="True" />
               <Node name="Title" expanded="True" />
-              <Node name="CamScript.cs" selected="True" />
+              <Node name="SpawnBall.cs" selected="True" />
             </Node>
           </Node>
         </State>

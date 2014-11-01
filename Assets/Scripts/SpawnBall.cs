@@ -35,6 +35,7 @@ public class SpawnBall : MonoBehaviour {
 										speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
 										charging = true;
 								} else if (charging) { //if the mouse button is released
+										audio.Play ();
 										smoke.Play ();
 										potato = (GameObject)Instantiate (ball, transform.position, transform.rotation); //create a new ball
 										potato.rigidbody.velocity = transform.rotation * new Vector3 (0, 0, speed); //set the speed to forward and rotate it
