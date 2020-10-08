@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpawnBall : MonoBehaviour {
 
 	public GameObject ball; //ball prefab to launch
 	public float maxSpeed = 25;
 	public float minSpeed = 5;
-	public GUIText text; //GUI text to display balls remaining
+	public Text text; //GUI text to display balls remaining
 	public WinScript win;
 	public GameOver over;
 	public bool launchable;
@@ -35,11 +36,11 @@ public class SpawnBall : MonoBehaviour {
 										speed = (float)Mathf.Min (maxSpeed, speed + 0.5f); //increment the speed by 0.5 m/s, up to max speed
 										charging = true;
 								} else if (charging) { //if the mouse button is released
-										audio.Play ();
+										GetComponent<AudioSource>().Play ();
 										smoke.Play ();
 										potato = (GameObject)Instantiate (ball, transform.position, transform.rotation); //create a new ball
-										potato.rigidbody.velocity = transform.rotation * new Vector3 (0, 0, speed); //set the speed to forward and rotate it
-										potato.rigidbody.angularVelocity = new Vector3 (Random.Range (-8, 8), Random.Range (-8, 8), Random.Range (-8, 8));
+										potato.GetComponent<Rigidbody>().velocity = transform.rotation * new Vector3 (0, 0, speed); //set the speed to forward and rotate it
+										potato.GetComponent<Rigidbody>().angularVelocity = new Vector3 (Random.Range (-8, 8), Random.Range (-8, 8), Random.Range (-8, 8));
 										ballsLeft --; //decrement balls remaining
 										speed = minSpeed; //reset speed
 										charging = false;

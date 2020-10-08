@@ -15,7 +15,7 @@ public class TitleScript : MonoBehaviour {
 		originalPos = transform.position; //store original position
 		originalRot = transform.rotation; //store original rotation
 		if (gameObject.tag.Equals ("Potato")) { //set potato's velocity to local Z
-			rigidbody.velocity = originalRot*(new Vector3(0, 0, 5));
+			GetComponent<Rigidbody>().velocity = originalRot*(new Vector3(0, 0, 5));
 		}
 	}
 	// Update is called once per frame
@@ -24,16 +24,16 @@ public class TitleScript : MonoBehaviour {
 		if (time < 0) { //reset the blocks
 			transform.position = (transform.position + (originalPos - transform.position) * reverseTween * Time.deltaTime*5);
 			transform.rotation = Quaternion.Slerp (transform.rotation, originalRot, Time.deltaTime*reverseTween*5);
-			rigidbody.isKinematic = true;
+			GetComponent<Rigidbody>().isKinematic = true;
 			if (time < -sceneTime) {
-				rigidbody.isKinematic = false;
+				GetComponent<Rigidbody>().isKinematic = false;
 		//		transform.position = originalPos;
 		//		transform.rotation = originalRot;
-				rigidbody.velocity = Vector3.zero;
+				GetComponent<Rigidbody>().velocity = Vector3.zero;
 				if (gameObject.tag.Equals ("Potato")) {
-					rigidbody.velocity = originalRot*(new Vector3(0, 0, 5));
+					GetComponent<Rigidbody>().velocity = originalRot*(new Vector3(0, 0, 5));
 				}
-				rigidbody.isKinematic = false;
+				GetComponent<Rigidbody>().isKinematic = false;
 				time = sceneTime;
 			}
 		}
